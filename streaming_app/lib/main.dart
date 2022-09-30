@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
-  // publishExample handles starting the stream and checking if credntials are valid
+  // publishExample handles starting the stream and checking if credentials are valid
   void publishExample() async {
     if (pubTok.text.isEmpty || streamName.text.isEmpty || accID.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -69,10 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ));
     } else {
       try {
-        publish = await publishConnect(
-            _localRenderer, accID.text, streamName.text, pubTok.text);
+        publish =
+            await publishConnect(_localRenderer, streamName.text, pubTok.text);
         showWidget();
       } catch (e) {
+        print(e);
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           backgroundColor: Colors.grey,
           content: Text(

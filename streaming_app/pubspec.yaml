@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   millicast_flutter_sdk: ^1.0.0
   flutter_webrtc: ^0.8.9
+  url_launcher: ^6.1.5
 
 dev_dependencies:
   flutter_test:
